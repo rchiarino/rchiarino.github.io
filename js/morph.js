@@ -6,33 +6,6 @@ const DEFAULT_CURSOR_BORDER_RADIUS =
   cursor.firstElementChild.style.getPropertyValue("border-radius");
 let isCursorLocked = false;
 
-var isMobile = {
-  Android: function () {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function () {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function () {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function () {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function () {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function () {
-    return (
-      isMobile.Android() ||
-      isMobile.BlackBerry() ||
-      isMobile.iOS() ||
-      isMobile.Opera() ||
-      isMobile.Windows()
-    );
-  },
-};
-
 function isTouchDevice() {
   return (
     "ontouchstart" in window ||
@@ -43,6 +16,7 @@ function isTouchDevice() {
 
 if (isTouchDevice()) {
   alert("MOBILE");
+  document.querySelector("#cursor").style.setProperty("display", "none");
 }
 
 if (!isMobile.any() || !isTouchDevice()) {
