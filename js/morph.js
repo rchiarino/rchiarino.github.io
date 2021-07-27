@@ -33,6 +33,18 @@ var isMobile = {
   },
 };
 
+function isTouchDevice() {
+  return (
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+}
+
+if (isTouchDevice()) {
+  alert("MOBILE");
+}
+
 if (!isMobile.any()) {
   document.addEventListener("mousedown", () => {
     if (!isCursorLocked) {
