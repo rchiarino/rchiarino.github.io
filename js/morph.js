@@ -45,7 +45,7 @@ if (isTouchDevice()) {
   alert("MOBILE");
 }
 
-if (!isMobile.any()) {
+if (!isMobile.any() || !isTouchDevice()) {
   document.addEventListener("mousedown", () => {
     if (!isCursorLocked) {
       cursor.style.setProperty("--scale", 0.9);
