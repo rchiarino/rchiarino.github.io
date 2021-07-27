@@ -15,11 +15,10 @@ function isTouchDevice() {
 }
 
 if (isTouchDevice()) {
-  alert("MOBILE");
   document.querySelector("#cursor").style.setProperty("display", "none");
 }
 
-if (!isMobile.any() || !isTouchDevice()) {
+if (!isTouchDevice()) {
   document.addEventListener("mousedown", () => {
     if (!isCursorLocked) {
       cursor.style.setProperty("--scale", 0.9);
