@@ -1,6 +1,7 @@
 "use strict";
 const cursor = document.querySelector("#cursor");
 const menu = document.querySelector("#nav-icon");
+const about_box = document.querySelectorAll(".a-box");
 const DEFAULT_CURSOR_SIZE = cursor.style.getPropertyValue("--height");
 const DEFAULT_CURSOR_BORDER_RADIUS =
   cursor.firstElementChild.style.getPropertyValue("border-radius");
@@ -36,6 +37,19 @@ if (!isTouchDevice()) {
       cursor.style.setProperty("--top", y + "px");
       cursor.style.setProperty("--left", x + "px");
     }
+  });
+
+  //ABOUT
+
+  about_box.forEach((box) => {
+    box.addEventListener("mouseenter", () => {
+      document.getElementById("cursor__content").style.border =
+        "2.5px solid #000";
+    });
+    box.addEventListener("mouseleave", () => {
+      document.getElementById("cursor__content").style.border =
+        "2.5px solid #fff";
+    });
   });
 
   //MENU
