@@ -1,6 +1,6 @@
 "use strict";
 const cursor = document.querySelector("#cursor");
-const menu = document.querySelector("#nav-icon");
+const menu = document.querySelector(".bun");
 const about_box = document.querySelectorAll(".a-box");
 const DEFAULT_CURSOR_SIZE = cursor.style.getPropertyValue("--height");
 const DEFAULT_CURSOR_BORDER_RADIUS =
@@ -51,45 +51,6 @@ if (!isTouchDevice()) {
         "2.5px solid #fff";
     });
   });
-
-  //MENU
-  menu.addEventListener(
-    "mouseenter",
-    ({ target }) => {
-      isCursorLocked = true;
-      var circle = target.getBoundingClientRect();
-      cursor.classList.add("is-locked");
-      cursor.style.setProperty("--width", circle.width + "px");
-      cursor.style.setProperty("--height", circle.height + "px");
-      cursor.firstElementChild.style.setProperty("border-radius", "50%");
-      target.style.setProperty("--scale", 1.05);
-    },
-    { passive: true }
-  );
-
-  menu.addEventListener(
-    "mouseleave",
-    ({ target }) => {
-      isCursorLocked = false;
-      cursor.style.setProperty("--width", DEFAULT_CURSOR_SIZE);
-      cursor.style.setProperty("--height", DEFAULT_CURSOR_SIZE);
-      cursor.firstElementChild.style.setProperty(
-        "border-radius",
-        DEFAULT_CURSOR_BORDER_RADIUS
-      );
-      cursor.style.setProperty("--translateX", 0);
-      cursor.style.setProperty("--translateY", 0);
-      target.style.setProperty("--translateX", 0);
-      target.style.setProperty("--translateY", 0);
-      target.style.setProperty("--scale", 1);
-      setTimeout(() => {
-        if (!isCursorLocked) {
-          cursor.classList.remove("is-locked");
-        }
-      }, 100);
-    },
-    { passive: true }
-  );
 
   // LINKS
   document.querySelectorAll("a").forEach((a) => {
