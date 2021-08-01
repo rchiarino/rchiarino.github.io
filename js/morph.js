@@ -1,25 +1,12 @@
 "use strict";
 const cursor = document.querySelector("#cursor");
-const menu = document.querySelector(".bun");
 const about_box = document.querySelectorAll(".a-box");
 const DEFAULT_CURSOR_SIZE = cursor.style.getPropertyValue("--height");
 const DEFAULT_CURSOR_BORDER_RADIUS =
   cursor.firstElementChild.style.getPropertyValue("border-radius");
 let isCursorLocked = false;
 
-function isTouchDevice() {
-  return (
-    "ontouchstart" in window ||
-    navigator.maxTouchPoints > 0 ||
-    navigator.msMaxTouchPoints > 0
-  );
-}
 
-if (isTouchDevice()) {
-  document.querySelector("#cursor").style.setProperty("display", "none");
-}
-
-if (!isTouchDevice()) {
   document.addEventListener("mousedown", () => {
     if (!isCursorLocked) {
       cursor.style.setProperty("--scale", 0.9);
@@ -40,7 +27,6 @@ if (!isTouchDevice()) {
   });
 
   //ABOUT
-
   about_box.forEach((box) => {
     box.addEventListener("mouseenter", () => {
       document.getElementById("cursor__content").style.border =
@@ -138,4 +124,3 @@ if (!isTouchDevice()) {
       document.getElementById("cursor__content").style.border =
         "2.5px solid #fff";
     });
-}
