@@ -2,7 +2,6 @@
     "name": "rchiarino.github.io",
     "version": "1.0.0",
     "description": "Personal space on the net",
-    "main": "index.js",
     "scripts": {
         "host": "parcel ./src/index.html",
         "clear": "shx rm -rf dist/*",
@@ -21,19 +20,14 @@
     },
     "homepage": "https://github.com/rchiarino/rchiarino.github.io#readme",
     "dependencies": {
-        "@barba/core": "^2.9.7",
         "aos": "^3.0.0-beta.6",
-        "push-dir": "^0.4.1",
         "three": "^0.131.3"
     },
     "devDependencies": {
         "@trysound/sax": "^0.1.1",
-        "cssnano": "4.1.11",
-        "htmlnano": "0.2.9",
         "lilconfig": "^2.0.3",
-        "nanoid": "^3.1.23",
-        "parcel-bundler": "^1.12.5",
-        "postcss": "8.2.7",
+        "parcel": "^2.0.0-rc.0",
+        "push-dir": "^0.4.1",
         "shx": "^0.3.3"
     },
     "keywords": []
