@@ -239,7 +239,6 @@ function resize(renderer) {
   return needResize;
 }
 
-//!
 //!EXTRAS
 var actualYear = new Date().getFullYear();
 document.getElementById("year").innerHTML = actualYear;
