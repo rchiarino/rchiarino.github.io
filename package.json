@@ -9,7 +9,7 @@
         "build-dev": "parcel build ./src/index.html --no-minify --public-url ./",
         "prebuild": "shx rm -rf dist/*",
         "build": "parcel build ./src/index.html --public-url ./",
-        "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+        "deploy": "push-dir --dir=dist --branch=main --cleanup --verbose"
     },
     "repository": {
         "type": "git",
@@ -23,6 +23,7 @@
     "homepage": "https://github.com/rchiarino/rchiarino.github.io#readme",
     "dependencies": {
         "@barba/core": "^2.9.7",
+        "aos": "^3.0.0-beta.6",
         "push-dir": "^0.4.1",
         "three": "^0.131.3"
     },

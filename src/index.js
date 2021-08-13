@@ -1,11 +1,14 @@
 import * as THREE from "three";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 //!
 //!MORPH
 ("use strict");
 const cursor = document.querySelector("#cursor");
-const about_box = document.querySelectorAll(".a-box");
+// const about_box = document.querySelectorAll(".a-box");
 const DEFAULT_CURSOR_SIZE = cursor.style.getPropertyValue("--height");
 const DEFAULT_CURSOR_BORDER_RADIUS =
   cursor.firstElementChild.style.getPropertyValue("border-radius");
@@ -30,68 +33,107 @@ document.addEventListener("mousemove", ({ x, y }) => {
   }
 });
 
-//ABOUT
-about_box.forEach((box) => {
-  box.addEventListener("mouseenter", () => {
-    document.getElementById("cursor__content").style.border =
-      "2.5px solid #000";
-  });
-  box.addEventListener("mouseleave", () => {
-    document.getElementById("cursor__content").style.border =
-      "2.5px solid #fff";
-  });
-});
-
-// LINKS
+// LINKS && H3;
 document.querySelectorAll("a").forEach((a) => {
   let rect = null;
-  a.addEventListener(
-    "mouseenter",
-    ({ target }) => {
-      isCursorLocked = true;
-      rect = target.getBoundingClientRect();
-      cursor.classList.add("is-locked");
-      cursor.style.setProperty("--top", rect.top + rect.height / 2 + "px");
-      cursor.style.setProperty("--left", rect.left + rect.width / 2 + "px");
-      cursor.style.setProperty("--width", rect.width + "px");
-      cursor.style.setProperty("--height", rect.height + "px");
-      target.style.setProperty("--scale", 1.05);
-    },
-    { passive: true }
-  );
-  a.addEventListener(
-    "mousemove",
-    ({ target }) => {
-      const halfHeight = rect.height / 2;
-      const topOffset = (event.y - rect.top - halfHeight) / halfHeight;
-      const halfWidth = rect.width / 2;
-      const leftOffset = (event.x - rect.left - halfWidth) / halfWidth;
-      cursor.style.setProperty("--translateX", `${leftOffset * 3}px`);
-      cursor.style.setProperty("--translateY", `${topOffset * 3}px`);
-      target.style.setProperty("--translateX", `${leftOffset * 6}px`);
-      target.style.setProperty("--translateY", `${topOffset * 4}px`);
-    },
-    { passive: true }
-  );
-  a.addEventListener(
-    "mouseleave",
-    ({ target }) => {
-      isCursorLocked = false;
-      cursor.style.setProperty("--width", DEFAULT_CURSOR_SIZE);
-      cursor.style.setProperty("--height", DEFAULT_CURSOR_SIZE);
-      cursor.style.setProperty("--translateX", 0);
-      cursor.style.setProperty("--translateY", 0);
-      target.style.setProperty("--translateX", 0);
-      target.style.setProperty("--translateY", 0);
-      target.style.setProperty("--scale", 1);
-      setTimeout(() => {
-        if (!isCursorLocked) {
-          cursor.classList.remove("is-locked");
-        }
-      }, 100);
-    },
-    { passive: true }
-  );
+  if (a.parentNode.nodeName != "H3") {
+    a.addEventListener(
+      "mouseenter",
+      ({ target }) => {
+        isCursorLocked = true;
+        rect = target.getBoundingClientRect();
+        cursor.classList.add("is-locked");
+        cursor.style.setProperty("--top", rect.top + rect.height / 2 + "px");
+        cursor.style.setProperty("--left", rect.left + rect.width / 2 + "px");
+        cursor.style.setProperty("--width", rect.width + "px");
+        cursor.style.setProperty("--height", rect.height + "px");
+        target.style.setProperty("--scale", 1.05);
+      },
+      { passive: true }
+    );
+    a.addEventListener(
+      "mousemove",
+      ({ target }) => {
+        const halfHeight = rect.height / 2;
+        const topOffset = (event.y - rect.top - halfHeight) / halfHeight;
+        const halfWidth = rect.width / 2;
+        const leftOffset = (event.x - rect.left - halfWidth) / halfWidth;
+        cursor.style.setProperty("--translateX", `${leftOffset * 3}px`);
+        cursor.style.setProperty("--translateY", `${topOffset * 3}px`);
+        target.style.setProperty("--translateX", `${leftOffset * 6}px`);
+        target.style.setProperty("--translateY", `${topOffset * 4}px`);
+      },
+      { passive: true }
+    );
+    a.addEventListener(
+      "mouseleave",
+      ({ target }) => {
+        isCursorLocked = false;
+        cursor.style.setProperty("--width", DEFAULT_CURSOR_SIZE);
+        cursor.style.setProperty("--height", DEFAULT_CURSOR_SIZE);
+        cursor.style.setProperty("--translateX", 0);
+        cursor.style.setProperty("--translateY", 0);
+        target.style.setProperty("--translateX", 0);
+        target.style.setProperty("--translateY", 0);
+        target.style.setProperty("--scale", 1);
+        setTimeout(() => {
+          if (!isCursorLocked) {
+            cursor.classList.remove("is-locked");
+          }
+        }, 100);
+      },
+      { passive: true }
+    );
+  } else {
+    //!h3
+    a.addEventListener(
+      "mouseenter",
+      ({ target }) => {
+        isCursorLocked = true;
+        rect = target.getBoundingClientRect();
+        cursor.classList.add("is-locked");
+        cursor.style.setProperty("--top", rect.top + rect.height + "px");
+        cursor.style.setProperty("--left", rect.left + rect.width / 2 + "px");
+        cursor.style.setProperty("--width", rect.width + "px");
+        cursor.style.setProperty("--height", "0.2em");
+        target.style.setProperty("--scale", 1.05);
+      },
+      { passive: true }
+    );
+    a.addEventListener(
+      "mousemove",
+      ({ target }) => {
+        const halfHeight = rect.height / 2;
+        const topOffset = (event.y - rect.top - halfHeight) / halfHeight;
+        const halfWidth = rect.width / 2;
+        const leftOffset = (event.x - rect.left - halfWidth) / halfWidth;
+        cursor.style.setProperty("--translateX", `${leftOffset * 3}px`);
+        cursor.style.setProperty("--translateY", `${topOffset * 3}px`);
+        target.style.setProperty("--translateX", `${leftOffset * 6}px`);
+        target.style.setProperty("--translateY", `${topOffset * 4}px`);
+      },
+      { passive: true }
+    );
+    a.addEventListener(
+      "mouseleave",
+      ({ target }) => {
+        isCursorLocked = false;
+        cursor.style.setProperty("--width", DEFAULT_CURSOR_SIZE);
+        cursor.style.setProperty("--height", DEFAULT_CURSOR_SIZE);
+        cursor.style.setProperty("--translateX", 0);
+        cursor.style.setProperty("--translateY", 0);
+        target.style.setProperty("--translateX", 0);
+        target.style.setProperty("--translateY", 0);
+        target.style.setProperty("--scale", 1);
+        setTimeout(() => {
+          if (!isCursorLocked) {
+            cursor.classList.remove("is-locked");
+          }
+        }, 100);
+      },
+      { passive: true }
+    );
+  }
 });
 
 // PARAGRAPH
@@ -100,7 +142,7 @@ document.querySelectorAll("p").forEach((p) => {
     "mouseover",
     () => {
       cursor.style.setProperty("--width", "0.2em");
-      cursor.style.setProperty("--height", "1.5em");
+      cursor.style.setProperty("--height", "1.2em");
     },
     { passive: true }
   );
@@ -114,24 +156,8 @@ document.querySelectorAll("p").forEach((p) => {
   );
 });
 
-// CUSTOM HOVER
-document
-  .querySelector("div.experiments-wrapper")
-  .lastElementChild.addEventListener("mouseenter", () => {
-    document.getElementById("cursor__content").style.border =
-      "2.5px solid #000";
-  });
-
-document
-  .querySelector("div.experiments-wrapper")
-  .lastElementChild.addEventListener("mouseleave", () => {
-    document.getElementById("cursor__content").style.border =
-      "2.5px solid #fff";
-  });
-
 //!
 //!FACE
-
 const sizes = {
   width: window.innerWidth,
   height: window.innerHeight,
@@ -140,12 +166,7 @@ const sizes = {
 window.addEventListener("load", init);
 const canvas = document.querySelector("canvas.face");
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(
-  75,
-  sizes.width / sizes.height,
-  0.1,
-  1000
-);
+const camera = new THREE.PerspectiveCamera(75, 500 / 500, 0.1, 1000);
 camera.position.z = 35;
 var renderer;
 var mesh;
@@ -160,7 +181,7 @@ function init() {
     canvas: canvas,
     alpha: true,
   });
-  renderer.setSize(sizes.width, sizes.height);
+  renderer.setSize(500, 500);
   scene.add(new THREE.AmbientLight(0x404040));
 
   //Use this to load face
@@ -169,7 +190,7 @@ function init() {
     // "./face.obj",
     "https://cdn.glitch.com/936f10d8-3f68-47e2-9089-ee16ea821370%2Fface.obj?v=1628558804721",
     (obj) => {
-      let material = new THREE.PointsMaterial({ color: 0xffffff, size: 0.02 });
+      let material = new THREE.PointsMaterial({ color: 0xe6f1ff, size: 0.02 });
       mesh = new THREE.Points(obj.children[0].geometry, material);
       mesh.position.y = -5;
       mesh.position.z = 1;
@@ -221,7 +242,6 @@ function resize(renderer) {
 //!
 //!EXTRAS
 var actualYear = new Date().getFullYear();
-// console.log(actualYear);
 document.getElementById("year").innerHTML = actualYear;
 document.getElementById("age").innerHTML = actualYear - 2001;
 
