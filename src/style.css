@@ -404,37 +404,6 @@ p > span:active {
   outline: 0;
 }
 
-p > a:hover:after,
-p > a:focus:after,
-p > a:active:after {
-  width: 100%;
-}
-
-p > a:hover > *,
-p > span:hover > *,
-p > a:focus > *,
-p > span:focus > *,
-p > a:active > *,
-p > span:active > * {
-  color: var(--green) !important;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
-
-p > a:after,
-p > span::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 1px;
-  position: relative;
-  bottom: 0.37em;
-  background-color: var(--green);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  opacity: 0.5;
-}
-
 p > code {
   background-color: var(--light-navy);
   color: var(--white);
@@ -854,14 +823,24 @@ ul.works a {
   margin-top: -4px;
 }
 
-ul.fancy-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  font-size: var(--fz-lg);
+ul.tech-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  row-gap: 0px;
+  column-gap: 10px;
+  padding-top: 0px;
+  margin-top: 20px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  list-style-type: none;
+  list-style-position: initial;
+  list-style-image: initial;
 }
 
-ul.fancy-list li {
+ul.tech-list li {
   position: relative;
   padding-left: 20px;
   font-family: var(--font-mono);
@@ -869,7 +848,7 @@ ul.fancy-list li {
   margin-bottom: 10px;
 }
 
-ul.fancy-list li:before {
+ul.tech-list li:before {
   content: "➤";
   position: absolute;
   left: 0;
@@ -947,10 +926,7 @@ ul.fancy-list li:before {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 7px;
-  padding-left: 7px;
+  padding: 10px;
 }
 
 .experiment .experiment-top a.external svg {
