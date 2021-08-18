@@ -189,7 +189,7 @@ function init() {
     // "./face.obj",
     "https://cdn.glitch.com/936f10d8-3f68-47e2-9089-ee16ea821370%2Fface.obj?v=1628558804721",
     (obj) => {
-      let material = new THREE.PointsMaterial({ color: 0xe6f1ff, size: 0.02 });
+      let material = new THREE.PointsMaterial({ color: 0xffffff, size: 0.02 });
       mesh = new THREE.Points(obj.children[0].geometry, material);
       mesh.position.y = -5;
       mesh.position.z = 1;
@@ -239,6 +239,7 @@ function resize(renderer) {
 }
 
 //!EXTRAS
+
 var actualYear = new Date().getFullYear();
 document.getElementById("year").innerHTML = actualYear;
 document.getElementById("age").innerHTML = actualYear - 2001;
@@ -254,3 +255,5 @@ function isTouchDevice() {
 if (isTouchDevice()) {
   document.querySelector("#cursor").style.setProperty("display", "none");
 }
+
+//TODO: reform this file

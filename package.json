@@ -20,10 +20,12 @@
     },
     "homepage": "https://github.com/rchiarino/rchiarino.github.io#readme",
     "dependencies": {
+        "animejs": "^3.2.1",
         "aos": "^3.0.0-beta.6",
         "three": "^0.131.3"
     },
     "devDependencies": {
+        "@parcel/transformer-image": "^2.0.0-rc.0",
         "@trysound/sax": "^0.1.1",
         "lilconfig": "^2.0.3",
         "parcel": "^2.0.0-rc.0",
