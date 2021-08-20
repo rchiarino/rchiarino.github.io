@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Renzo Chiarino v2.0 08-13-21" />
+    <title>Renzo Chiarino</title>
+
+    <link href="./style.css" rel="stylesheet" />
+</head>
+
+<body >
+    <div id="cursor" class="cursor">
+        <div id="cursor__content" class="cursor__content"></div>
+    </div>
+
+    <div class="bg">
+    </div>
+
+    <div class="background blur-noround">
+
+        <main class="fillHeight">
+
+            <header>
+                <div class="hero">
+                    <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+                        <h1 class="highlight ">Hi there, I'm</h1>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+                        <h2 class="big-heading ">Renzo Chiarino.</h2>
+                    </div>
+                    <div data-aos="fade-up" data-aos-once="true" data-aos-delay="300">
+                        <h3 class="big-heading message">Transforming the net</h3>
+                    </div>
+                    <div data-aos="fade-up" data-aos-once="true" data-aos-delay="400" class="message">
+                        <p>
+                            I’ve a strong passion for creating unique experiences.
+                        </p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-once="true" data-aos-delay="500">
+                        <a href="#contact" class="email-link">Contact</a>
+                    </div>
+                </div>
+            </header>
+
+            <section id="about">
+                <h2 data-aos="fade-up" data-aos-once="true" class="numbered-heading">About Me</h2>
+                <div data-aos="fade-up" data-aos-once="true" class="inner blur">
+                    <div>
+                        <p data-aos="fade-up" data-aos-once="true" data-aos-delay="150">
+                            Hi, my name is Renzo, I'm <span id="age">000</span> years old and currently studying <span>software engineer</span>. Currently living in Uruguay.
+
+                            
+                        </p>
+                        <p data-aos="fade-up" data-aos-once="true" data-aos-delay="150">
+                            These are the most recent technologies that I have used:
+                        </p>
+                        <ul data-aos="fade-up" data-aos-once="true" data-aos-delay="150" class="tech-list">
+                            <li>JavaScript (ES6+)</li>
+                            <li>Flutter</li>
+                            <li>IoT</li>
+                            <li>Java</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div data-aos="fade-up" data-aos-once="true" data-aos-delay="150" class="wrapper">
+                            <canvas class="face"></canvas>
+                        </div>
+                    </div>
+            </section>
+
+            <section id="work">
+                <h2 data-aos="fade-up" data-aos-once="true" data-aos-delay="150" class="numbered-heading">Some Work I’ve
+                    Done</h2>
+
+                <ul class="works">
+                    <li data-aos="fade-left" data-aos-once="ture" data-aos-delay="350" class="work">
+                        <div class="work-content">
+                            <div>
+                                <p class="work-overline">Featured Project</p>
+                                <h3 class="work-title">
+                                    <a href="#" rel="noopener noreferrer" target="_blank">Palmeras Del Uruguay</a>
+                                </h3>
+                                <div class="work-description">
+                                    <p>Palmeras del Uruguay is a garden center specialized in the production and sale of
+                                        palms. I've redesigned its <span>logo</span> and developed a
+                                        <span>website</span> to
+                                        showcase its works, products.
+                                    </p>
+                                </div>
+                                <ul class="tech-used">
+                                    <li>Ilustrator</li>
+                                    <li>HTML-CSS-JS</li>
+                                    <li>MySQL</li>
+                                </ul>
+                                <div class="work-links ">
+                                    <a href="https://www.palmerasdeluruguay.com.uy" aria-label="External Link"
+                                        class="external" rel="noopener noreferrer" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-external-link">
+                                            <title>External Link</title>
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="work-image">
+                                <div class="image-wrapper img">
+                                    <picture>
+                                        <source type="image/webp" srcset="./static/img/pdu.webp"
+                                            sizes="(min-width: 700px) 700px, 100vw">
+                                        <img width="700" height="440" 
+                                            sizes="(min-width: 700px) 700px, 100vw" decoding="async"
+                                            src="./static/img/pdu.webp" alt="Palmeras del Uruguay">
+                                    </picture>
+                                </div>
+                        </div>
+                    </li>
+                    <!-- <li  data-aos="fade-right" data-aos-once="true" data-aos-delay="350" class="work">
+                        <div class="work-content">
+                            <div>
+                                <p class="work-overline">Featured Project</p>
+                                <h3 class="work-title">
+                                    <a href="#" rel="noopener noreferrer" target="_blank">Lorem, ipsum dolor.</a>
+                                </h3>
+                                <div class="work-description">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolorum nihil quos
+                                        at minima praesentium ratione totam temporibus ipsam laudantium, itaque enim!
+                                        Distinctio blanditiis earum in magnam debitis accusantium assumenda?</p>
+                                </div>
+                                <ul class="tech-used">
+                                    <li>Lorem.</li>
+                                    <li>Lorem.</li>
+                                    <li>Lorem.</li>
+                                </ul>
+                                <div class="work-links">
+                                    <a href="#" aria-label="GitHub Link"
+                                        rel="noopener noreferrer" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
+                                            role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-github">
+                                            <title>GitHub</title>
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg></a>
+                                    <a href="#" aria-label="External Link"
+                                        class="external" rel="noopener noreferrer" target="_blank"><svg
+                                            xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-external-link">
+                                            <title>External Link</title>
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+            </section>
+
+            <section id="experiments" class="s-ex">
+                <h2 data-aos="fade-up" data-aos-delay="200" data-aos-once="true" class="numbered-heading">Experiments
+                </h2>
+                <ul class="experiments-grid">
+
+                    <li data-aos="fade-up" data-aos-delay="450" data-aos-once="true" class="experiment blur">
+                        <div class="experiment-inner">
+                            <header>
+                                <div class="experiment-top">
+                                    <div class="folder">
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-folder">
+                                            <title>Folder</title>
+                                            <path
+                                                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="experiment-links">
+                                        <a href="https://github.com/rchiarino/HAS" aria-label="GitHub Link"
+                                            rel="noopener noreferrer" target="_blank" class="external"><svg
+                                                xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-github">
+                                                <title>GitHub</title>
+                                                <path
+                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3 class="experiment-title">
+                                    <a href="https://github.com/rchiarino/HAS" target="_blank"
+                                        rel="noopener noreferrer">H.
+                                        A. S.</a>
+                                </h3>
+                                <div class="experiment-description">
+                                    <p>Home Automatization System, is a system that uses Relays and <a
+                                            href="https://www.espressif.com/en/products/socs/esp32/overview"
+                                            target="_blank" rel="noopener noreferrer">ESP</a> as the hardware, <a
+                                            href="https://firebase.google.com/" target="_blank"
+                                            rel="noopener noreferrer">Firebase</a> as the database and <a
+                                            href="https://developers.google.com/assistant/smarthome/develop/create"
+                                            target="_blank" rel="noopener noreferrer">Google Home</a> as the UI. With
+                                        this
+                                        you could control any kind of device, going from lights to something more
+                                        advanced
+                                        as a boiler to heat your home.
+                                    </p>
+                                </div>
+                            </header>
+                            <footer>
+                                <ul class="tech-used">
+                                    <li>Arduino</li>
+                                    <li>Firebase</li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="450" data-aos-once="true" class="experiment blur">
+                        <div class="experiment-inner">
+                            <header>
+                                <div class="experiment-top">
+                                    <div class="folder"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-folder">
+                                            <title>Folder</title>
+                                            <path
+                                                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="experiment-links">
+                                        <a href="https://github.com/rchiarino/manage" aria-label="GitHub Link"
+                                            rel="noopener noreferrer" target="_blank" class="external"><svg
+                                                xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-github">
+                                                <title>GitHub</title>
+                                                <path
+                                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3 class="experiment-title"><a href="https://github.com/rchiarino/manage"
+                                        target="_blank" rel="noopener noreferrer">QR Manager</a></h3>
+                                <div class="experiment-description">
+                                    <p>This is a <span>boilerplate</span> to develop a functional QR scanner and
+                                        inventory
+                                        manager. <br> <br> <span>TODO:</span> Connect this app to <a
+                                            href="https://firebase.google.com/" target="_blank">Firebase</a> or any
+                                        database
+                                        of your choice.</p>
+                                </div>
+                            </header>
+                            <footer>
+                                <ul class="tech-used">
+                                    <li>Flutter</li>
+                                    <li>Android</li>
+                                    <li>IOS</li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </li>
+
+                    <!-- <li  data-aos="fade-up" data-aos-delay="" data-aos-once="true" class="experiment">
+                        <div class="experiment-inner">
+                            <header>
+                                <div class="experiment-top">
+                                    <div class="folder"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder">
+                                            <title>Folder</title>
+                                            <path
+                                                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg></div>
+                                    <div class="experiment-links">
+                                        <a href="#" aria-label="GitHub Link"
+                                        rel="noopener noreferrer" target="_blank" class="external"><svg xmlns="http://www.w3.org/2000/svg"
+                                            role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-github">
+                                            <title>GitHub</title>
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                        <a href="#" aria-label="External Link" class="external"
+                                            target="_blank" rel="noopener noreferrer">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" class="feather feather-external-link">
+                                                <title>External Link</title>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                                <polyline points="15 3 21 3 21 9"></polyline>
+                                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h3 class="experiment-title"><a href="#" target="_blank" rel="noopener noreferrer">Lorem
+                                        ipsum dolor sit.</a></h3>
+                                <div class="experiment-description">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur ipsum atque,
+                                        asperiores magni ipsa, adipisci animi voluptates rem officiis, fugiat dolorum
+                                        nesciunt non porro! Beatae vero et sit nobis mollitia?</p>
+                                </div>
+                            </header>
+                            <footer>
+                                <ul class="tech-used">
+                                    <li>Lorem.</li>
+                                    <li>Lorem.</li>
+                                    <li>Lorem.</li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </li>
+                    <li  data-aos="fade-up" data-aos-delay="" data-aos-once="true" class="experiment">
+                        <div class="experiment-inner">
+                            <header>
+                                <div class="experiment-top">
+                                    <div class="folder"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder">
+                                            <title>Folder</title>
+                                            <path
+                                                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg></div>
+                                    <div class="experiment-links"><a href="#" aria-label="External Link" class="external"
+                                            target="_blank" rel="noopener noreferrer"><svg
+                                                xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" class="feather feather-external-link">
+                                                <title>External Link</title>
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                                <polyline points="15 3 21 3 21 9"></polyline>
+                                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            </svg></a></div>
+                                </div>
+                                <h3 class="experiment-title"><a href="#" target="_blank" rel="noopener noreferrer">Lorem
+                                        ipsum dolor sit.</a></h3>
+                                <div class="experiment-description">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur ipsum atque,
+                                        asperiores magni ipsa, adipisci animi voluptates rem officiis, fugiat dolorum
+                                        nesciunt non porro! Beatae vero et sit nobis mollitia?</p>
+                                </div>
+                            </header>
+                            <footer>
+                                <ul class="tech-used">
+                                    <li>Lorem.</li>
+                                    <li>Lorem.</li>
+                                    <li>Lorem.</li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </li> -->
+
+                </ul>
+            </section>
+
+            <section id="contact" class="contact">
+                <div class="contact-inner blur">
+                    <h2 class="numbered-heading overline">Stop Scrolling</h2>
+                    <h2 class="title">Get In Touch</h2>
+                    <p>Right now I am looking for new projects, <br> <span>note:</span> my email is always open, be it for future work or just to say hi.</p>
+                    <a class="email-link" href="mailto:r.chiarino0@gmail.com" rel="noopener noreferrer"
+                        target="_blank">Go Ahead</a>
+                </div>
+            </section>
+        </main>
+        <div class="social">
+            <ul class="social-list">
+                <li>
+                    <a href="https://github.com/rchiarino" aria-label="GitHub" target="_blank" rel="noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-github">
+                            <title>GitHub</title>
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/rchiarino" aria-label="Instagram" target="_blank"
+                        rel="noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-instagram">
+                            <title>Instagram</title>
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <footer class="foot">
+            <div class="social-foot">
+                <ul>
+                    <li>
+                        <a href="https://github.com/rchiarino" aria-label="GitHub" rel="noopener noreferrer"
+                            target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-github">
+                                <title>GitHub</title>
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/rchiarino" aria-label="Instagram" rel="noopener noreferrer"
+                            target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-instagram">
+                                <title>Instagram</title>
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="foot-text">
+                <div>&copy; <span id="year">2021</span> Renzo Chiarino</h5>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>
